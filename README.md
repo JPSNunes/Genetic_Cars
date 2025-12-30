@@ -1,0 +1,1 @@
+First you need to install the Genetic Algorithm Package. Type "pip install pygad==3.3.1 numpy" in your terminal.
