@@ -1,17 +1,35 @@
-NUM_GENES = 5
+# genome.py
+
+NUM_GENES = 13
 
 GENE_NAMES = [
-    "wheel_size",
-    "wheel_density",
-    "suspension_hardness",
-    "wheel_left_pos",
-    "wheel_right_pos"
+    "wheelRadius",
+    "wheelMass",
+    "wheelDamping",
+    "suspensionDistance",
+    "suspensionSpring",
+    "suspensionDamper",
+    "suspensionTargetPos",
+    "forwardExtremumSlip",
+    "forwardExtremumValue",
+    "forwardAsymptoteSlip",
+    "forwardAsymptoteValue",
+    "forwardStiffness",
+    "carMass"
 ]
 
 GENE_SPACE = [
-    {"low": 0.5, "high": 2.0},    # wheel_size
-    {"low": 0.2, "high": 1.0},    # wheel_density
-    {"low": 0.0, "high": 1.0},    # suspension_hardness
-    {"low": 0.0, "high": 1.0},    # wheel left (0 is centered, 1 is outside of the vehicle)
-    {"low": 0.0, "high": 0.5}     # wheel_right (0 is centered, 1 is outside of the vehicle)
+    {"low": 0.2, "high": 1.0},      # wheelRadius
+    {"low": 10.0, "high": 80.0},    # wheelMass
+    {"low": 0.0, "high": 2.0},      # wheelDamping
+    {"low": 0.05, "high": 0.5},     # suspensionDistance
+    {"low": 5000, "high": 50000},   # suspensionSpring
+    {"low": 500, "high": 5000},     # suspensionDamper
+    {"low": 0.0, "high": 1.0},      # suspensionTargetPos
+    {"low": 0.1, "high": 1.0},      # forwardExtremumSlip
+    {"low": 0.5, "high": 2.0},      # forwardExtremumValue
+    {"low": 0.5, "high": 2.0},      # forwardAsymptoteSlip
+    {"low": 0.3, "high": 1.5},      # forwardAsymptoteValue
+    {"low": 0.5, "high": 3.0},      # forwardStiffness
+    {"low": 400, "high": 2000}      # carMass
 ]
