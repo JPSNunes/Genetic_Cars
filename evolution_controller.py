@@ -108,7 +108,7 @@ def append_metrics_csv(generation, best, mean, std, duration):
             writer.writerow(header)
         writer.writerow([generation, best, mean, std, round(duration, 4)])
 
-def evolution_loop(unity_url="ws://localhost:8080", generations=10, timeout_per_ind=10):
+def evolution_loop(unity_url="ws://localhost:8080", generations=10, timeout_per_ind=1000):
     ga = init_ga()
     comm = UnityComm(url=unity_url, timeout=timeout_per_ind, retries=2, retry_delay=1.0)
     comm.connect()
@@ -135,4 +135,4 @@ def evolution_loop(unity_url="ws://localhost:8080", generations=10, timeout_per_
         comm.close()
 
 if __name__ == "__main__":
-    evolution_loop(generations=10, timeout_per_ind=15)
+    evolution_loop(generations=10, timeout_per_ind=1000)

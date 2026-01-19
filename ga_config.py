@@ -1,7 +1,7 @@
 GA_PARAMS = {
     "num_generations": 50,
     "num_parents_mating": 3,
-    "sol_per_pop": 5,
+    "sol_per_pop": 30,
     "parent_selection_type": "tournament",
     "keep_parents": 2,
     "crossover_type": "uniform",
